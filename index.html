@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    /* Style for the loading screen overlay */
+    #loading-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      /* Background color of the overlay */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    /* Style for the loading image */
+    #loading-image {
+      width: 200px;
+      /* Adjust the width and height as needed */
+      height: 200px;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PawfectPairs</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/shining-monday" rel="stylesheet">
+  <link href="https://www.dafontfree.net/embed/ZnJhbmtmdXJ0ZXItbWVkaXVtLXBsYWluJmRhdGEvNDgvZi80MzkxOC9GcmFua2Z1cnRlck1lZGl1bVBsYWluLm90Zg" rel="stylesheet" type="text/css" />
+  <script src="https://kit.fontawesome.com/eac6711083.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div id="loading-overlay">
+    <img id="loading-image" src="image/PawfectPairs Loading Screen.gif" alt="Loading">
+  </div>
+  <div class="navbar navbar-expand-md navbar-light">
+    <a class="logo-link" href="#">
+      <img class="mx-auto d-block img-logo" src="image\PawfectPairs_logo.png" alt="pawfectpairs-logo">
+      <h1 class="mt-3 logo navbar-brand"></h1>
+    </a>
+  </div>
+  <div class="container">
+    <ul class="nav nav-tabs mt-3">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#profile">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#chatting">Chat</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#swiping">Match</a>
+      </li>
+    </ul>
+    <div class="tab-content">
+      <div id="profile" class="tab-pane fade show active">
+        <div class="card mt-3">
+          <div class="card-header text-center">Your Dog</div>
+          <div class="card-body">
+            <div id="profile-container" class="container-fluid">
+              <div class="profile-info d-flex row">
+                <div class="col-md-6 col-sm-12 align-items-right">
+                  <img class="pfp" src="image/dogs/husky.png" alt="profile-pic">
+                </div>
+                <div class="col-md-4">
+                  <div>
+                    <label for="dog-name"></label>
+                    <input type="text" id="dog-name" value="Skye" readonly>
+                  </div>
+                  <div>
+                    <label for="breed"><i class="fa-solid fa-dog" style="color: #545454;"></i></label>
+                    <input type="text" id="breed" value="Siberian Husky" readonly>
+                  </div>
+                  <div>
+                    <label for="owner-name"><i class="fa-solid fa-user" style="color: #545454;"></i></label>
+                    <input type="text" id="owner-name" value="David" readonly>
+                  </div>
+                  <div>
+                    <label for="location"><i class="fa-solid fa-location-dot" style="color: #545454;"></i></label>
+                    <input type="text" id="location" value="Quezon City" readonly>
+                  </div>
+                  <div>
+                    <label for="about" class="about">About Me</label>
+                    <textarea id="about" name="about" rows="5" cols="20" readonly>Woof! Hi there! I'm a young and energetic husky, ready to take on the world with my furry paws and wagging tail. I'm just bursting with excitement to meet new friends like you!</textarea>
+                  </div>
+                  <button id="edit-button">Edit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="chatting" class="tab-pane fade">
+        <div class="card mt-3">
+          <div class="card-header text-center">Messages</div>
+          <div class="card-body">
+            <div class="chat-list">
+              <!-- Sample Chat Conversation -->
+              <!--
+          <div class="chat-item">
+            <div class="chat-header">
+              <img src="avatar.png" alt="User Avatar" class="chat-avatar">
+              <div class="chat-info">
+                <h4 class="chat-name">John Doe</h4>
+                <p class="chat-timestamp">2 hours ago</p>
+              </div>
+            </div>
+            <div class="chat-message">
+              <p>Hey, how are you doing?</p>
+            </div>
+          </div>
+          -->
+              <!-- Add more chat conversations here -->
+            </div>
+            <div id="chat-container" class="chat-container">
+              <div id="chat-view" class="chat-view">
+                <div id="chat-messages" class="chat-messages">
+                  <!-- Chat messages will be appended here -->
+                </div>
+              </div>
+              <div class="chat-input">
+                <input type="text" id="message-input" placeholder="Type your message...">
+                <button id="send-button">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div id="swiping" class="tab-pane fade">
+        <div class="card mt-3">
+          <div class="card-header text-center">SNUB OR WAG?</div>
+          <div class="card-body">
+            <div class="swipe-card" id="swipeCard">
+              <div class="d-flex row">
+              <div class="profile-info-swiping col-md-5">
+                <h5 class="card-title"></h5>
+                <p class="card-text"><span id="swipeDogName"></span></p>
+                <p class="card-text"><i class="fa-solid fa-dog" style="color: #545454;"></i><span id="swipeBreed"></span></p>
+                <h5 class="card-title"></h5>
+                <p class="card-text"><i class="fa-solid fa-user" style="color: #545454;"></i><span id="swipeOwnerName"></span></p>
+                <p class="card-text"><i class="fa-solid fa-location-dot" style="color: #545454;"></i><span id="swipeLocation"></span></p>
+              </div>
+              <div class="col-md-7">
+              <img src="dog1.jpg" alt="Dog Image" id="swipeDogImage" class="swipe-dog-image">
+            </div>
+          </div>
+              <div class="swipe-overlay swipe-left">Snub</div>
+              <div class="swipe-overlay swipe-right">Wag</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Remove the loading overlay once loaded
+    window.addEventListener("load", function() {
+      var loadingOverlay = document.getElementById("loading-overlay");
+      setTimeout(function() {
+        loadingOverlay.style.display = "none";
+      }, 2000);
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
