@@ -1,353 +1,190 @@
-body {
-  background-image: url("image/body-bg.png");
-  background-size: cover;
-  font-family: 'Nunito', sans-serif;
+*{
+    font-family: Nunito;
+
 }
 
-.card-body {
-  background-color: #FBFBF3;
+body{
+    background: ffc994;
+    background-image: url('6.png');
 }
-.navbar {
-  background-color: #fcc944;
+
+.section-padding{
+    padding: 100px 0;
+}
+
+.carousel-item{
+    height: 100vh;
+    min-height: 300px;
+}
+
+.carousel-caption{
+    bottom: 220px;
+    z-index: 2;
+}
+
+.carousel-caption h5{
+    font-size: 90px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-top: 25px;
+
+}
+
+.carousel-caption p{
+    /* font-family: Frankfurter; */
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.btn{
+    font-family: Nunito;
+    font-size: 30px;
+}
+
+.carousel-inner::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#carouselExampleCaptions img {
   width: 100%;
 }
 
-.img-logo {
-  height: 6rem;
-}
-
-.logo-link {
-  height: 6rem;
-  margin-left: 3rem;
-}
-
-@media (max-width: 768px) {
-  .logo-link {
-    display: block;
-    margin: 0 auto;
-  }
-}
-
-.nav {
-  border: none;
-}
-
-.nav-item {
+.navbar {
   background-color: #fbfbf3;
-  margin: 1rem;
 }
 
-.nav-tabs .nav-link {
-  border-style: solid;
-  border-radius: 300px;
-  border-width: medium;
-  border-color: #fcc944;
-  color: #fcc944;
-  font-weight: bolder;
+.navbar-nav a{
+    font-size: 1.5rem;
+    color: #EF723C;
+    font-weight: lighter;
+    margin: auto 1rem;
+}
+
+.navbar-nav:hover {
+    color: #EF723C;
 }
 
 .nav-link:hover {
-  color: white;
-  background-color: #fcc944;
-  border-radius: 300px;
+    color: #b1b9e8;
 }
 
-.nav-tabs .nav-link.active {
-  color: #FBFBF3;
-  background-color: #ef723c;
-  border-color: #ef723c;
-  border-radius: 300px;
+.w-100{
+    height: 100vh;
 }
 
-.card-header {
-  background-color: #EF723C;
-  color: #FBFBF3;
-  font-family: 'Shining Monday', sans-serif;
-  font-size: 2.5rem;
+#cta {
+    background-image: url(6.png);
+    text-align: center;
+  }
+
+  .beforetestimonial{
+    text-align: flex;
+    font-weight: bold;
+    margin: 100px 15% 40px;
+  }
+
+  .iphone-img {
+    width: 30%;
+    position: absolute;
+    top: 1200px;
+    /* right: 10%; */
+    z-index: 0;
+  }
+
+  .rotate-25 {
+    transform: rotate(25deg);
+  }
+
+.testimonial{
+    background-image: url(5.png);
+    z-index: 1;
+    position:relative;
 }
 
-.pfp {
-  border-radius: 35%;
-  width: 100%;
-  height: auto;
+.testimonial .card {
+  height: 21rem;
+  margin: 5rem;
 }
 
-.profile-info {
-  margin-top: 20px;
-  color: black;
-  margin-left: 5rem;
-  z-index: 2;
+  /* team section */
+
+  .members {
+    margin: auto;
+  }
+  .team .section-header .h2{
+    font-family: Shining Monday;
+  }
+  .team-member-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .team .card-body i{
+    font-size: 20px;
+  }
+
+  .team .card{
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .the-team{
+    font-weight: bold;
+    font-size: 65px;
+  }
+
+  .card-title{
+     font-family: 'Frankurter Medium Plain';
+  }
+
+
+/* responsiveness of the site */
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .carousel-caption{
+        bottom: 370px;
+    }
+
+    .card{
+        margin-bottom: 30px;
+        font-family: Nunito;
+    }
+
+    .img-area{
+        width: 100px;
+    }
 }
 
-.profile-info input {
-  border: none;
-  outline: none;
-  background-color: transparent;
-  max-width: 100%;
-  font-size: 19px;
-}
+@media only screen and (max-width: 767px){
+    .navbar-nav{
+        text-align: center;
+    }
 
-.about {
-  color: #ff9d93;
-  font-size: 30px;
-  font-family: 'frankfurter-medium-plain', sans-serif;
-  font-weight: bold;
-}
+    .carousel-caption{
+        bottom: 125px;
+    }
 
-#about {
-  margin-bottom: 4rem;
-resize: none;
-border: none;
-overflow: hidden;
-background-color: transparent;
-outline: none;
-font-family: inherit;
-font-size: inherit;
-font-weight: inherit;
-color: inherit;
-width: 100%;
-}
+    .carousel-caption h5{
+        font-size: 17px;
+    }
 
-#dog-name {
-  color: #7780B4;
-  font-size: 61px;
-  font-family: 'frankfurter-medium-plain', sans-serif;
-  font-weight: bold;
-}
+    .carousel-caption a{
+        padding: 10px 15px;
+    }
 
-#edit-button {
-  background-color: transparent;
-  border-color: #ef723c;
-  bottom: 10px;
-  color: #ef723c;
-  position: absolute;
-  outline: none;
-}
-
-#edit-button:focus {
-  background-color: transparent;
-  border-color: #ef723c;
-  bottom: 10px;
-  color: #ef723c;
-  position: absolute;
-  outline: none;
-}
-.chat-list {
-  max-height: 300px;
-  overflow-y: auto;
-}
-
-.chat-item {
-  padding: 10px;
-  cursor: pointer;
-  background-color: #f1f1f1;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-.chat-item:hover {
-  background-color: #e0e0e0;
-}
-
-.chat-header {
-  display: flex;
-  align-items: center;
-}
-
-.chat-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.chat-info {
-  flex: 1;
-}
-
-.chat-name {
-  margin: 0;
-}
-
-.chat-timestamp {
-  margin: 0;
-  font-size: 14px;
-  color: #888;
-}
-
-.chat-message {
-  margin-top: 5px;
-}
-
-.chat-container {
-  display: none;
-  padding: 20px;
-}
-
-.chat-view {
-  background-color: #f1f1f1;
-  border-radius: 5px;
-  max-height: 300px;
-  overflow-y: auto;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-.chat-messages {
-  margin-bottom: 10px;
-}
-
-.chat-input {
-  display: flex;
-  align-items: center;
-}
-
-.chat-input input {
-  flex: 1;
-  padding: 5px;
-  margin-right: 10px;
-  border-radius: 3px;
-  border: 1px solid #ddd;
-}
-
-.chat-input button {
-  padding: 5px 10px;
-  background-color: #5cb85c;
-  color: white;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.chat-input button:hover {
-  background-color: #449d44;
-}
-
-.swipe-card {
-  position: relative;
-  width: 80%;
-  min-width: 420px;
-  height: 500px;
-  background-color: #fbfbf3;
-  border-radius: 5px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20px;
-  box-sizing: border-box;
-  margin: 0 auto;
-  transition: transform 0.3s ease;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  /* Add box-shadow for a frame effect */
-}
-
-#swiping .card-body {
-  background-image: url("image/card-body-bg.png");
-  background-size: cover;
-}
-
-.profile-info-swiping {
-  margin-top: 20px;
-  color: black;
-  position: center;
-  z-index: 0;
-}
-
-#swipeDogName {
-  color: #7780B4;
-  font-size: 50px;
-  font-family: 'frankfurter-medium-plain', sans-serif;
-  font-weight: bold;
-}
-
-#swipeBreed {
-  max-width: 100%;
-  font-size: 19px;
-}
-
-#swipeOwnerName {
-  max-width: 100%;
-  font-size: 19px;
-}
-
-#swipeLocation {
-  max-width: 100%;
-  font-size: 19px;
-}
-
-.swipe-card .fa-solid {
-  margin-right: 10px;
-}
-
-.swipe-card.swipe-left {
-  transform: translateX(-1200px);
-  /* Slide out to the left */
-}
-
-.swipe-card.swipe-right {
-  transform: translateX(1200px);
-  /* Slide out to the right */
-}
-
-.swipe-dog-image {
-  width: 100%;
-  height: 480px;
-  /* Set a constant height for the picture frame */
-  object-fit: cover;
-}
-
-.swipe-overlay {
-  position: absolute;
-  bottom: 10px;
-  width: 100px;
-  height: 50px;
-  padding: 10px;
-  font-size: 18px;
-  color: white;
-  text-align: center;
-  cursor: pointer;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#swipeDogImage {
-  border-radius: 5rem;
-}
-
-.swipe-left {
-  border-color: #ef723c;
-  border-width: medium;
-  border-style: solid;
-  border-radius: 3rem;
-  color: #ef723c;
-  left: 10px;
-}
-
-.swipe-left:hover {
-  border-color: #ef723c;
-  background-color: #ef723c;
-  border-width: medium;
-  border-style: solid;
-  border-radius: 3rem;
-  color: #fbfbf3;
-  left: 10px;
-}
-
-.swipe-right {
-  background-color: #27A86E;
-  border-radius: 3rem;
-  left: 120px;
-}
-
-.swipe-right:hover {
-  border-color: #27A86E;
-  background-color: #fbfbf3;
-  border-width: medium;
-  border-style: solid;
-  border-radius: 3rem;
-  color: #27A86E;
-  left: 120px;
+    .carousel-caption p{
+        width: 100px;
+        line-height: 1.6;
+        font-size: 12px;
+    }
 }
